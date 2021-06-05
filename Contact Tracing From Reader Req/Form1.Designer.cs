@@ -142,7 +142,7 @@ namespace Contact_Tracing_From_Reader_Req
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(30, 49);
+            this.lblName.Location = new System.Drawing.Point(30, 46);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(49, 20);
             this.lblName.TabIndex = 1;
@@ -172,7 +172,7 @@ namespace Contact_Tracing_From_Reader_Req
             // lblAge
             // 
             this.lblAge.AutoSize = true;
-            this.lblAge.Location = new System.Drawing.Point(30, 109);
+            this.lblAge.Location = new System.Drawing.Point(30, 105);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(36, 20);
             this.lblAge.TabIndex = 2;
@@ -201,7 +201,7 @@ namespace Contact_Tracing_From_Reader_Req
             // lblSex
             // 
             this.lblSex.AutoSize = true;
-            this.lblSex.Location = new System.Drawing.Point(30, 161);
+            this.lblSex.Location = new System.Drawing.Point(30, 155);
             this.lblSex.Name = "lblSex";
             this.lblSex.Size = new System.Drawing.Size(32, 20);
             this.lblSex.TabIndex = 14;
@@ -381,6 +381,7 @@ namespace Contact_Tracing_From_Reader_Req
             this.Controls.Add(this.btnOpen);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cntcttrcfrmReader";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contact Tracing Data Reader";
             this.grpbxPersonal.ResumeLayout(false);
             this.grpbxPersonal.PerformLayout();
