@@ -29,6 +29,7 @@ namespace Contact_Tracing_From_Reader_Req
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cntcttrcfrmReader));
             this.ofd1 = new System.Windows.Forms.OpenFileDialog();
             this.btnOpen = new System.Windows.Forms.Button();
             this.cmbbxNames = new System.Windows.Forms.ComboBox();
@@ -52,10 +53,12 @@ namespace Contact_Tracing_From_Reader_Req
             this.lblPhone = new System.Windows.Forms.Label();
             this.lblResidence = new System.Windows.Forms.Label();
             this.grpbxDate = new System.Windows.Forms.GroupBox();
+            this.txtbxDate = new System.Windows.Forms.TextBox();
             this.txtbxTimeO = new System.Windows.Forms.TextBox();
             this.txtbxTimeI = new System.Windows.Forms.TextBox();
             this.lblTimeO = new System.Windows.Forms.Label();
             this.lblTimeI = new System.Windows.Forms.Label();
+            this.lblNames = new System.Windows.Forms.Label();
             this.grpbxPersonal.SuspendLayout();
             this.grpbxContact.SuspendLayout();
             this.grpbxDate.SuspendLayout();
@@ -67,7 +70,7 @@ namespace Contact_Tracing_From_Reader_Req
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(341, 32);
+            this.btnOpen.Location = new System.Drawing.Point(365, 35);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(94, 29);
             this.btnOpen.TabIndex = 0;
@@ -79,9 +82,7 @@ namespace Contact_Tracing_From_Reader_Req
             // 
             this.cmbbxNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbbxNames.FormattingEnabled = true;
-            this.cmbbxNames.Items.AddRange(new object[] {
-            "Name/s"});
-            this.cmbbxNames.Location = new System.Drawing.Point(275, 67);
+            this.cmbbxNames.Location = new System.Drawing.Point(301, 70);
             this.cmbbxNames.MaxDropDownItems = 100;
             this.cmbbxNames.Name = "cmbbxNames";
             this.cmbbxNames.Size = new System.Drawing.Size(236, 28);
@@ -295,6 +296,7 @@ namespace Contact_Tracing_From_Reader_Req
             // 
             // grpbxDate
             // 
+            this.grpbxDate.Controls.Add(this.txtbxDate);
             this.grpbxDate.Controls.Add(this.txtbxTimeO);
             this.grpbxDate.Controls.Add(this.txtbxTimeI);
             this.grpbxDate.Controls.Add(this.lblTimeO);
@@ -306,6 +308,15 @@ namespace Contact_Tracing_From_Reader_Req
             this.grpbxDate.TabStop = false;
             this.grpbxDate.Text = "Date";
             this.grpbxDate.Visible = false;
+            // 
+            // txtbxDate
+            // 
+            this.txtbxDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbxDate.Location = new System.Drawing.Point(30, 26);
+            this.txtbxDate.Name = "txtbxDate";
+            this.txtbxDate.ReadOnly = true;
+            this.txtbxDate.Size = new System.Drawing.Size(169, 20);
+            this.txtbxDate.TabIndex = 21;
             // 
             // txtbxTimeO
             // 
@@ -319,7 +330,7 @@ namespace Contact_Tracing_From_Reader_Req
             // txtbxTimeI
             // 
             this.txtbxTimeI.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbxTimeI.Location = new System.Drawing.Point(126, 50);
+            this.txtbxTimeI.Location = new System.Drawing.Point(126, 75);
             this.txtbxTimeI.Name = "txtbxTimeI";
             this.txtbxTimeI.ReadOnly = true;
             this.txtbxTimeI.Size = new System.Drawing.Size(217, 20);
@@ -338,12 +349,23 @@ namespace Contact_Tracing_From_Reader_Req
             // lblTimeI
             // 
             this.lblTimeI.AutoSize = true;
-            this.lblTimeI.Location = new System.Drawing.Point(21, 50);
+            this.lblTimeI.Location = new System.Drawing.Point(21, 75);
             this.lblTimeI.Name = "lblTimeI";
             this.lblTimeI.Size = new System.Drawing.Size(58, 20);
             this.lblTimeI.TabIndex = 17;
             this.lblTimeI.Text = "Time In";
             this.lblTimeI.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblNames
+            // 
+            this.lblNames.AutoSize = true;
+            this.lblNames.Location = new System.Drawing.Point(231, 73);
+            this.lblNames.Name = "lblNames";
+            this.lblNames.Size = new System.Drawing.Size(64, 20);
+            this.lblNames.TabIndex = 26;
+            this.lblNames.Text = "Name/s:";
+            this.lblNames.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblNames.Visible = false;
             // 
             // cntcttrcfrmReader
             // 
@@ -351,13 +373,15 @@ namespace Contact_Tracing_From_Reader_Req
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 525);
+            this.Controls.Add(this.lblNames);
             this.Controls.Add(this.grpbxDate);
             this.Controls.Add(this.grpbxContact);
             this.Controls.Add(this.grpbxPersonal);
             this.Controls.Add(this.cmbbxNames);
             this.Controls.Add(this.btnOpen);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cntcttrcfrmReader";
-            this.Text = "Contact Tracing Data";
+            this.Text = "Contact Tracing Data Reader";
             this.grpbxPersonal.ResumeLayout(false);
             this.grpbxPersonal.PerformLayout();
             this.grpbxContact.ResumeLayout(false);
@@ -365,6 +389,7 @@ namespace Contact_Tracing_From_Reader_Req
             this.grpbxDate.ResumeLayout(false);
             this.grpbxDate.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -397,6 +422,8 @@ namespace Contact_Tracing_From_Reader_Req
         private System.Windows.Forms.TextBox txtbxTimeI;
         private System.Windows.Forms.Label lblTimeO;
         private System.Windows.Forms.Label lblTimeI;
+        private System.Windows.Forms.TextBox txtbxDate;
+        private System.Windows.Forms.Label lblNames;
     }
 }
 

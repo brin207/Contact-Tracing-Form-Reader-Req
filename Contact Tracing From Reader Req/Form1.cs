@@ -23,7 +23,7 @@ namespace Contact_Tracing_From_Reader_Req
  
             if (ofd1.ShowDialog() == DialogResult.OK) {
 
-                cmbbxNames.Visible = true;
+                lblNames.Visible = cmbbxNames.Visible = true;
                     StreamReader inptFile = File.OpenText(ofd1.FileName);
                     while (inptFile.EndOfStream == false)
                     {
@@ -56,7 +56,7 @@ namespace Contact_Tracing_From_Reader_Req
                     txtbxEmail.Text = inptFile.ReadLine();
                     txtbxPhone.Text = inptFile.ReadLine();
                     txtbxAddress.Text = inptFile.ReadLine();
-                    string Date = inptFile.ReadLine();
+                    txtbxDate.Text = inptFile.ReadLine();
                     txtbxTimeI.Text = inptFile.ReadLine();
                     txtbxTimeO.Text = inptFile.ReadLine();
                 }
