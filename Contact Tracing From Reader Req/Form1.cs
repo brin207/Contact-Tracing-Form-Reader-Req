@@ -22,6 +22,7 @@ namespace Contact_Tracing_From_Reader_Req
             if (ofd1.ShowDialog() == DialogResult.OK) {
                 lblNames.Visible = cmbbxNames.Visible = true;
                 cmbbxNames.Items.Clear();
+                txtbxName.Text = txtbxAge.Text = txtbxSex.Text = txtbxTemp.Text = txtbxEmail.Text = txtbxPhone.Text = txtbxAddress.Text = txtbxDate.Text = txtbxTimeI.Text = txtbxTimeO.Text = "";
                 StreamReader inptFile = File.OpenText(ofd1.FileName);
                     while (inptFile.EndOfStream == false)
                     {
@@ -32,7 +33,6 @@ namespace Contact_Tracing_From_Reader_Req
                     }
             }
         }
-
         private void cmbbxNames_SelectedIndexChanged(object sender, EventArgs e)
         {
             StreamReader inptFile = File.OpenText(ofd1.FileName);
@@ -59,7 +59,6 @@ namespace Contact_Tracing_From_Reader_Req
             }
             inptFile.Close();
         }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
