@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
-
 namespace Contact_Tracing_From_Reader_Req
 {
     public partial class cntcttrcfrmReader : Form
