@@ -17,35 +17,27 @@ namespace Contact_Tracing_From_Reader_Req
         {
             InitializeComponent();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
- 
             if (ofd1.ShowDialog() == DialogResult.OK) {
-
                 lblNames.Visible = cmbbxNames.Visible = true;
-                    StreamReader inptFile = File.OpenText(ofd1.FileName);
+                cmbbxNames.Items.Clear();
+                StreamReader inptFile = File.OpenText(ofd1.FileName);
                     while (inptFile.EndOfStream == false)
                     {
-
                         if (inptFile.ReadLine() == "=====")
                         {
-                            
                             cmbbxNames.Items.Add(inptFile.ReadLine());
                         }
-
                     }
             }
-            
         }
 
         private void cmbbxNames_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             StreamReader inptFile = File.OpenText(ofd1.FileName);
             while (inptFile.EndOfStream == false)
             {
-
                 if (inptFile.ReadLine() == cmbbxNames.SelectedItem.ToString())
                 {
                     grpbxPersonal.Visible = grpbxContact.Visible = grpbxDate.Visible = true;
@@ -62,11 +54,15 @@ namespace Contact_Tracing_From_Reader_Req
                 }
                 else if (cmbbxNames.SelectedItem.ToString() == "Name/s")
                 {
-
                     grpbxPersonal.Visible = grpbxContact.Visible = grpbxDate.Visible = false;
                 }
-
             }
+            inptFile.Close();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

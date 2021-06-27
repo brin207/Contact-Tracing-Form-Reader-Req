@@ -59,6 +59,7 @@ namespace Contact_Tracing_From_Reader_Req
             this.lblTimeO = new System.Windows.Forms.Label();
             this.lblTimeI = new System.Windows.Forms.Label();
             this.lblNames = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.grpbxPersonal.SuspendLayout();
             this.grpbxContact.SuspendLayout();
             this.grpbxDate.SuspendLayout();
@@ -70,7 +71,7 @@ namespace Contact_Tracing_From_Reader_Req
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(365, 35);
+            this.btnOpen.Location = new System.Drawing.Point(301, 35);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(94, 29);
             this.btnOpen.TabIndex = 0;
@@ -367,12 +368,23 @@ namespace Contact_Tracing_From_Reader_Req
             this.lblNames.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblNames.Visible = false;
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(443, 35);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(94, 29);
+            this.btnExit.TabIndex = 27;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // cntcttrcfrmReader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 525);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblNames);
             this.Controls.Add(this.grpbxDate);
             this.Controls.Add(this.grpbxContact);
@@ -425,6 +437,7 @@ namespace Contact_Tracing_From_Reader_Req
         private System.Windows.Forms.Label lblTimeI;
         private System.Windows.Forms.TextBox txtbxDate;
         private System.Windows.Forms.Label lblNames;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 
