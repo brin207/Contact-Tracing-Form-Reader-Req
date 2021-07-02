@@ -17,7 +17,7 @@ namespace Contact_Tracing_From_Reader_Req
             InitializeComponent();
         }
        
-        private void cmbbxNames_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbbxNames_SelectedIndexChanged(object sender, EventArgs e) // for asssigning the details in the different textboxes
         {
             StreamReader inptFile = File.OpenText(ofd1.FileName);
             while (inptFile.EndOfStream == false)
@@ -48,7 +48,7 @@ namespace Contact_Tracing_From_Reader_Req
             System.Windows.Forms.Application.Exit();
         }
 
-        private void btnOpen_Click(object sender, EventArgs e)
+        private void btnOpen_Click(object sender, EventArgs e) // for adding the names in the combo box list
         {
             if (ofd1.ShowDialog() == DialogResult.OK)
             {
