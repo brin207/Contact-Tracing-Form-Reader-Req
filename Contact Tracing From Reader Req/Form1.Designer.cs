@@ -77,7 +77,7 @@ namespace Contact_Tracing_From_Reader_Req
             this.btnOpen.TabIndex = 0;
             this.btnOpen.Text = "Open File";
             this.btnOpen.UseVisualStyleBackColor = true;
-            this.btnOpen.Click += new System.EventHandler(this.button1_Click);
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // cmbbxNames
             // 
